@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tab Light — Platform Riset Al-Qur’an & Pembelajaran Mendalam</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,600;0,6..72,700;1,6..72,600&family=Instrument+Sans:wght@400;500;600&family=Amiri:wght@400;700&display=swap">
+<style>
+:root{--bg:#EDF3F5;--card:#fff;--ink:#12303F;--mut:#55707C;--line:#D5E1E6;--gold:#B08A47;--gold2:#E3B96E;--sage:#2F7D63;--soft:#E8F1EE;--warn:#FFF6D8;--warnb:#E6C65C;--hero1:#10293A;--hero2:#264A5E;--tx:#8a6a2c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1A22;--card:#15262F;--ink:#EAF2F4;--mut:#A8BEC7;--line:#2A4350;--soft:#1B3535;--warn:#3A3017;--tx:#E3B96E}}
+:root[data-theme="dark"]{--bg:#0D1A22;--card:#15262F;--ink:#EAF2F4;--mut:#A8BEC7;--line:#2A4350;--soft:#1B3535;--warn:#3A3017;--tx:#E3B96E}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Instrument Sans",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:20}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:700;line-height:1.15;margin:.2em 0 .45em}
+h1{font-size:clamp(2.2rem,5.5vw,4rem)}h2{font-size:clamp(1.7rem,3.5vw,2.3rem)}h3{font-size:1.45rem}
+a{color:var(--tx)}:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--card);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:.8rem;padding:.5rem 1rem}
+.logo{display:inline-flex;flex-direction:column;text-decoration:none;flex:none}
+.frame{display:inline-flex;align-items:center;gap:8px;background:#12303F;border:2px solid #2a5068;border-radius:12px;padding:4px 14px 4px 5px}
+.frame b{background:#EDF3F5;color:#12303F;border-radius:7px;padding:1px 9px;font-size:.95rem;letter-spacing:.06em}
+.frame i{font:italic 600 1.5rem Newsreader,serif;color:var(--gold2)}
+.logo small{font:italic 600 .72rem Newsreader,serif;color:var(--gold);margin-top:2px}
+nav{display:flex;gap:.15rem;overflow-x:auto;flex:1;scrollbar-width:thin}
+nav button,.btn{font:inherit;font-weight:600;font-size:.92rem;border:1px solid transparent;background:transparent;color:var(--ink);border-radius:12px;padding:.4rem .7rem;cursor:pointer;min-height:44px;white-space:nowrap}
+nav button[aria-current=true]{background:#12303F;color:#fff}
+.pill{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--line);border-radius:12px;padding:.3rem .7rem;font-weight:600;font-size:.88rem;white-space:nowrap}
+.free{background:#DDF3E9;border-color:#9ED6BC;color:#0d5a3f}
+select,input,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.5rem .7rem;width:100%;min-height:44px}
+label{font-weight:600;display:block;margin:.8rem 0 .2rem}
+main{max-width:1120px;margin:0 auto;padding:1.2rem}section[hidden]{display:none}
+.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:#fff;border-radius:32px;padding:clamp(1.4rem,4vw,3.4rem);margin:.5rem 0 1.5rem}
+.hero h1{color:#fff;max-width:14em}.hero p{max-width:40em;font-size:1.1rem;color:#E7EFF2}
+.badge{display:inline-flex;gap:.4rem;background:rgba(255,255,255,.1);color:var(--gold2);border-radius:999px;padding:.25rem .9rem;font-weight:600;font-size:.9rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.4rem;align-items:center}
+.b1,.b2,.b3,.dk{font:inherit;font-weight:600;border-radius:14px;padding:.8rem 1.3rem;cursor:pointer;min-height:48px;border:1px solid transparent}
+.b1{background:var(--gold2);color:#12303F}.b2{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.25)}.b3{background:var(--gold);color:#fff}.dk{background:#12303F;color:#fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:clamp(1rem,3vw,2rem);margin:1rem 0;box-shadow:0 4px 18px rgba(16,41,58,.06)}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.tc{display:flex;flex-direction:column;justify-content:space-between;margin:0;border-radius:24px}
+.tc .row{display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.tc .ar{font-family:Amiri,"Noto Naskh Arabic",serif;color:var(--tx);font-size:1.05rem}
+.tc .ft{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:.8rem;margin-top:1rem;font-weight:600}
+.tc .ft button{background:none;border:0;font:inherit;font-weight:600;cursor:pointer;color:var(--ink);padding:.3rem 0}.tc .ft button+button{color:var(--tx)}
+.tag{display:inline-block;font-size:.78rem;font-weight:600;border-radius:7px;padding:.05rem .55rem;background:var(--soft);letter-spacing:.04em;text-transform:uppercase}.tag.u{background:var(--warn);text-transform:none}
+.note{background:var(--warn);border-left:5px solid var(--warnb);padding:.7rem 1rem;border-radius:10px;font-size:.95rem;margin:1rem 0}
+.car{display:grid;gap:1.5rem;grid-template-columns:minmax(200px,260px) 1fr;align-items:center}@media(max-width:700px){.car{grid-template-columns:1fr}}
+.car svg{width:100%;border-radius:18px;border:3px solid #E5D2A8}
+.cap{background:var(--warn);color:#7a5a00;border:1px solid var(--warnb);border-radius:8px;font-size:.8rem;text-align:center;padding:.3rem;margin-top:.5rem}
+blockquote{margin:1rem 0;padding:1rem 1.2rem;border-left:5px solid var(--gold);background:var(--soft);border-radius:0 16px 16px 0;font:italic 1.1rem Newsreader,serif}
+.ci{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem}
+.ic{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:1.1rem}
+.dots{display:flex;gap:.5rem;justify-content:center;margin-top:1rem}.dot{height:12px;width:12px;border-radius:99px;border:0;background:#B7CCC6;padding:0;min-height:0;cursor:pointer}.dot[aria-current=true]{width:40px;background:var(--gold)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}.chips button{font:inherit;border:1px solid var(--sage);background:var(--card);color:var(--ink);border-radius:999px;padding:.4rem .9rem;cursor:pointer;min-height:44px}.chips button[aria-pressed=true]{background:var(--sage);color:#fff;font-weight:600}
+pre{white-space:pre-wrap;background:var(--soft);padding:1rem;border-radius:14px;font:14px/1.5 ui-monospace,monospace}
+footer{border-top:1px solid var(--line);margin-top:2rem;padding:2rem 1.2rem}footer .in{max-width:1120px;margin:0 auto;display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}footer h4{color:var(--tx);letter-spacing:.06em;text-transform:uppercase;font-size:.85rem;margin:0 0 .5rem}footer a{display:block;margin:.2rem 0;color:var(--mut)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#beranda" aria-label="Tab Light, beranda"><span class="frame"><b>TAB</b><i>Light</i></span><small>Connecting Qur’an to our Life</small></a>
+  <nav id="nav" aria-label="Menu utama"></nav>
+  <span class="pill" id="net" title="Status koneksi">📶</span>
+  <select id="lang" style="width:auto" aria-label="Bahasa antarmuka"></select>
+  
+  <button class="ic" id="dm" aria-label="Mode gelap/terang">🌓</button>
+</header>
+<main>
+<div class="note"><strong>Prototipe demo.</strong> Belum ada server, basis data, autentikasi, atau AI. Semua isi bersifat contoh dan <em>belum diverifikasi editor</em>. <span id="langnote" hidden>Terjemahan antarmuka bahasa ini belum ditinjau; hanya arah tulisan yang berubah.</span></div>
+
+<section id="beranda">
+ <div class="hero">
+  <span class="badge">✦ Platform Terpadu Tafsir Tematik (Mawdhu’i) & Integritas Riset</span>
+  <h1>Menghidupkan Pesan Wahyu dengan Kedalaman Nalar & Integritas Ilmiah</h1>
+  <p>Alur belajar sistematis berbasis <b>RCTO-R</b> (Role, Context, Task, Output, References): pilih tema nyata → himpun ayat & konteks → telaah mufasir otoritatif → telusuri jurnal Scopus/SINTA → renungkan secara bermakna (<i>mindful, meaningful, joyful</i>).</p>
+  <div class="cta"><button class="b1" data-go="belajar">Mulai Alur Belajar RCTO-R →</button><button class="b2" data-go="ayat">Eksplorasi Ayat & Terjemahan</button><button class="b3" onclick="window.print()">Rangkuman 1 Halaman (Cetak/PDF)</button></div>
+ </div>
+ <div class="card"><div class="ci"><div><span class="tag">Kajian Tokoh & Khazanah Tafsir Mawdhu’i</span><h2>Pilar Metodologi & Mufasir Pilihan</h2></div><div><button class="ic" id="pp" aria-label="Jeda" aria-pressed="false">⏸</button> <button class="ic" id="prev" aria-label="Sebelumnya">‹</button> <button class="ic" id="next" aria-label="Berikutnya">›</button></div></div><hr style="border:0;border-top:1px solid var(--line)"><div id="slide" class="car"></div><div class="dots" id="dots"></div></div>
+ <h2>Tema Kajian Tematik Siap Pakai</h2><p style="color:var(--mut)">Tema contoh. Rujukan ayat dan metodologi 7 langkah al-Farmawi menunggu verifikasi editor.</p>
+ <div class="grid" id="tg"></div>
+ <div class="grid" style="margin-top:1.5rem">
+  <div class="card tc"><div><span class="tag">✦ Asisten Riset Cerdas</span><h3>Zayed — Pendamping Telaah Tanpa Halusinasi</h3><p>Dirancang dengan pagar aturan sistem sisi server: hanya mengutip naskah resmi, membedakan kutipan langsung dan parafrasa, tidak mengarang data buku, dan menolak berfatwa.</p></div><div class="ft"><i style="font-weight:400;color:var(--mut)">Pakaian putih sopan, santun beradab</i><button class="dk" data-go="zayed">Buka Percakapan Zayed →</button></div></div>
+  <div class="card tc"><div><span class="tag">🛡 Integritas Bibliografi Akademik</span><h3>Verifikasi Scopus & SINTA 1–5 Langsung</h3><p>Setiap artikel ditautkan ke daftar resmi Scopus Elsevier dan portal SINTA. Kolom yang belum terverifikasi ditandai transparan.</p></div><div class="ft"><i style="font-weight:400;color:var(--mut)">DOI Permanen & Open Access</i><button class="b3" data-go="jurnal">Jelajahi Jurnal Terindeks →</button></div></div>
+ </div>
+</section>
+
+<section id="belajar" hidden>
+ <h2>Alur Belajar RCTO-R</h2>
+ <div class="card"><h3>1. Tema</h3><div class="chips" id="themes" role="group" aria-label="Tema"></div><label for="custom">Atau tulis tema sendiri</label><input id="custom" placeholder="mis. etika bermedia sosial"></div>
+ <div class="card"><h3>2. Susun prompt</h3>
+  <label for="r">Role</label><input id="r" value="Pendamping belajar tafsir tematik yang hati-hati">
+  <label for="c">Context</label><input id="c" value="Mahasiswa PAI semester 3; ingin memahami tema dan menerapkannya">
+  <label for="t">Task</label><input id="t" value="Petakan ayat terkait dan bandingkan dua pendekatan tafsir">
+  <label for="o">Output</label><select id="o"><option>Peta ayat</option><option>Tabel perbandingan</option><option>Panduan belajar</option></select>
+  <label>References</label><div class="chips" id="refs" role="group" aria-label="Sumber tafsir"></div></div>
+ <div class="card"><h3>Prompt RCTO-R (tersusun otomatis)</h3><p style="color:var(--mut)">Terbentuk langsung saat Anda mengetik. Aturan sistem selalu ikut tertanam dan tidak bisa dihapus.</p><pre id="live" aria-live="polite"></pre><button class="dk" id="cp">Salin prompt</button> <span id="cpm" role="status"></span>
+ <h3 style="margin-top:1.2rem">Buka di platform AI</h3><p style="color:var(--mut)">Klik platform: prompt otomatis tersalin, lalu situsnya terbuka di tab baru. Tempel (Ctrl+V) di sana. Prompt dikirim ke pihak ketiga hanya saat Anda menempelkannya; periksa kebijakan privasi dan batas gratis tiap layanan. AI eksternal tidak memakai koleksi sumber Tab Light, jadi periksa sendiri semua sitasinya.</p><div class="chips" id="ai"></div></div>
+ <div class="card"><h3>Ringkasan 1 halaman</h3><p style="color:var(--mut)">Isi DOCX dan PDF identik: prompt RCTO-R, rujukan ayat (usulan awal), sumber terpilih, pertanyaan inkuiri, aturan sistem, dan catatan integritas. Data contoh ditandai belum diverifikasi.</p><p class="chips"><button class="dk" id="xd">Unduh DOCX</button><button class="dk" id="xp">Unduh PDF</button><button class="b3" onclick="window.print()">Cetak</button></p><p id="xm" role="status"></p></div>
+<div class="card"><h3>Siklus belajar</h3><p><b>Pahami</b> apa tema dan pertanyaannya → <b>Terapkan</b> bandingkan dua penafsir, diskusikan → <b>Renungkan</b> satu tindakan nyata minggu ini.</p></div>
+</section>
+
+<section id="tokoh" hidden><h2>Tokoh & Kitab</h2><div class="grid" id="works"></div></section>
+
+<section id="ayat" hidden><h2>Ayat & Konteks</h2>
+ <div class="note"><b>Beta.</b> Teks Arab dari Tanzil.net (CC BY 3.0, tidak diubah). Terjemahan Indonesia dari kompilasi Tanzil: <b>edisi dan tahun belum diverifikasi</b>, hanya untuk non-komersial. Pemilihan ayat per tema adalah usulan awal tim, belum ditinjau editor. Bukan pengganti mushaf cetak resmi atau guru.</div>
+ <div class="card"><label for="at">Tema</label><select id="at"></select><p id="av"></p>
+ <p><span class="tag">Teks Al-Qur’an</span> <span class="tag">Terjemahan</span> <span class="tag">Tafsir ulama</span> <span class="tag">Ringkasan editorial</span> <span class="tag u">Penjelasan AI</span></p>
+ <a href="https://quran.kemenag.go.id/" target="_blank" rel="noopener">Buka Qur’an Kemenag (sumber resmi, situs pihak ketiga)</a></div></section>
+
+<section id="jurnal" hidden><h2>Jurnal Riset</h2>
+ <div class="note">Mode hosting ini memblokir permintaan data ke situs lain, jadi hasil langsung belum tampil. Gunakan tautan pencarian resmi. Hasil kosong bukan bukti tidak ada publikasi.</div>
+ <div class="card"><label for="q">Kata kunci</label><input id="q" placeholder="mis. tafsir tematik pembelajaran mendalam">
+ <p class="chips" id="jl"></p>
+ <p>Kolom metadata per artikel: judul, penulis, afiliasi, tahun, jurnal, volume/nomor/halaman, DOI, abstrak (jika boleh), sumber indeks, tanggal verifikasi, tautan profil resmi, akses terbuka. Kolom kosong ditandai <span class="tag u">Belum diverifikasi</span>.</p></div></section>
+
+<section id="zayed" hidden><h2>Asisten Zayed</h2>
+ <div class="card"><span class="tag u">Belum terhubung</span><p>Zayed membantu menemukan sumber dan menyusun refleksi; tidak menggantikan guru atau ulama dan tidak berfatwa. Agar aktif butuh server dengan kunci API di sisi server dan koleksi sumber yang disetujui editor; jawaban wajib bersitasi yang dapat dibuka.</p>
+ <label for="zep">Alamat server Zayed (https)</label><input id="zep" placeholder="https://zayed-anda.example">
+ <div class="note"><b>Privasi:</b> pertanyaan dikirim ke server Zayed Anda, lalu ke layanan AI (paket gratis Gemini dapat memakai konten untuk memperbaiki produk Google; baca syarat resminya). Jangan mengetik data pribadi.</div>
+ <label for="zq">Pertanyaan</label><input id="zq" maxlength="600" placeholder="mis. Apa kata ayat tentang memeriksa berita?">
+ <p><button class="dk" id="zs">Tanya Zayed</button></p><div id="zo" aria-live="polite"></div></div></section>
+
+<section id="tahsin" hidden><h2>Tahsin & Tajwid</h2>
+ <div class="note">Rekaman hanya diputar ulang di perangkat Anda dan tidak dikirim ke mana pun. Tidak ada penilaian otomatis; pelafalan tetap perlu diperiksa guru yang berkualifikasi.</div>
+ <div class="card"><button class="dk" id="rec">● Mulai rekam</button> <span id="rs" role="status"></span><p><audio id="au" controls hidden></audio></p></div>
+ <div class="note"><b>Ringkasan editorial tim, belum ditinjau guru atau ahli tajwid.</b> Rujukan kitab belum dicantumkan; verifikasi dengan guru dan buku tajwid standar. Panjang mad dan detail pelafalan mengikuti riwayat dan bimbingan guru (talaqqi).</div>
+ <div class="card"><h3>Kenali hukum nun mati dan tanwin</h3><p>Pilih huruf yang datang sesudah nun mati atau tanwin.</p><div class="chips" id="lh" role="group" aria-label="Huruf hijaiyah"></div><div id="lr" aria-live="polite" class="note" style="background:var(--soft);border-color:var(--sage)">Pilih sebuah huruf.</div></div>
+ <div class="grid" id="tj"></div>
+ <div class="card"><h3>Cara berlatih tahsin</h3><p>Dengarkan bacaan guru → tirukan pelan-pelan → rekam diri sendiri → bandingkan → minta koreksi guru. Rekaman tidak dinilai otomatis dan tidak dikirim ke mana pun.</p></div></section>
+
+<section id="salat" hidden><h2>Waktu Salat</h2>
+ <div class="note">Waktu dihitung di perangkat Anda dari rumus astronomi, bukan data resmi. Pilih lokasi dan tanggal, lalu bandingkan dengan jadwal resmi Kemenag sebelum dipakai beribadah.</div>
+ <div class="card"><label for="loc">Lokasi (pilih kota)</label><select id="loc"></select>
+ <div class="grid"><div><label for="lat">Lintang (°, selatan negatif)</label><input id="lat" type="number" step="0.0001"></div><div><label for="lng">Bujur (°)</label><input id="lng" type="number" step="0.0001"></div><div><label for="tz">Zona waktu</label><select id="tz"><option value="7">WIB (UTC+7)</option><option value="8">WITA (UTC+8)</option><option value="9">WIT (UTC+9)</option></select></div><div><label for="dt">Tanggal</label><input id="dt" type="date"></div></div>
+ <p><button class="dk" id="hs">Hitung waktu salat</button></p><div id="ptr" aria-live="polite"></div>
+ <p style="color:var(--mut);font-size:.92rem"><b>Metode:</b> kriteria Kemenag RI (Subuh −20°, Isya −18°, Ashar mazhab Syafi’i, Maghrib/terbit −0,833°) + ihtiyat 2 menit (Terbit dikurangi 2 menit). <b>Sumber:</b> hitungan astronomi lokal di perangkat ini, bukan data resmi; koordinat kota adalah perkiraan titik pusat. Selisih beberapa menit dari jadwal resmi bisa terjadi. <a target="_blank" rel="noopener" href="https://bimasislam.kemenag.go.id/jadwalshalat">Jadwal resmi Bimas Islam Kemenag (pihak ketiga)</a></p></div></section>
+
+<section id="catatan" hidden><h2>Catatan & Refleksi</h2>
+ <div class="card"><p><b>Privasi:</b> catatan disimpan hanya di browser perangkat ini (localStorage), tidak dikirim ke server, dan bisa hilang bila data browser dihapus. Anda bisa menghapusnya kapan saja.</p>
+ <label style="display:flex;gap:.5rem;font-weight:400"><input type="checkbox" id="ok" style="width:auto;min-height:0"> Saya paham dan setuju menyimpan di perangkat ini.</label>
+ <label for="nt">Refleksi</label><textarea id="nt" rows="3"></textarea><p><button class="dk" id="sv">Simpan</button> <span id="sm" role="status"></span></p><div id="nl"></div></div></section>
+
+<section id="admin" hidden><h2>Area Admin (RBAC)</h2>
+ <div class="note"><b>DEMO / RANCANGAN.</b> Tidak ada login, sandi, atau PIN. Produksi butuh autentikasi di server.</div>
+ <div class="card"><p>Peran: anggota · editor · pengulas · admin. Wajib MFA, log audit, sesi aman, pemulihan akun. Status konten: <span class="tag">Draft</span> <span class="tag">Dalam review</span> <span class="tag">Terbit</span> untuk teks Al-Qur’an, rujukan tafsir, metadata jurnal, terjemahan, dan materi AI.</p></div></section>
+</main>
+<footer><div class="in">
+ <div><span class="frame" style="display:inline-flex"><b>TAB</b><i>Light</i></span><p style="margin-top:.6rem"><b>Platform Riset Al-Qur’an & Pembelajaran Mendalam</b></p><p style="color:var(--mut)">Prototipe web responsif: alur RCTO-R, kajian mufasir, jurnal Scopus/SINTA, dan asisten Zayed beretika.</p></div>
+ <div><h4>Navigasi Khazanah</h4><a href="#belajar">Alur Pembelajaran RCTO-R</a><a href="#tokoh">Pilar Mufasir & Kitab</a><a href="#ayat">Ayat & Terjemahan</a><a href="#jurnal">Penemuan Jurnal</a><a href="#zayed">Asisten Riset Zayed</a></div>
+ <div><h4>Rujukan Resmi & Integritas Sumber</h4><a target="_blank" rel="noopener" href="https://kurikulum.kemendikdasmen.go.id/pembelajaran-mendalam">Prinsip Pembelajaran Mendalam (Kemendikdasmen RI)</a><a target="_blank" rel="noopener" href="https://sinta.kemdiktisaintek.go.id/">Portal Akreditasi SINTA</a><a target="_blank" rel="noopener" href="https://www.elsevier.com/products/scopus/content">Elsevier Scopus Content</a></div>
+</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const V=[["beranda","Beranda"],["belajar","Alur RCTO-R"],["tokoh","Tokoh & Kitab"],["ayat","Ayat & Konteks"],["jurnal","Jurnal Riset"],["zayed","Asisten Zayed"],["tahsin","Tahsin & Tajwid"],["salat","Waktu Salat"],["catatan","Catatan & Refleksi"],["admin","Area Admin (RBAC)"]];
+$("#nav").innerHTML=V.map(v=>`<button data-v="${v[0]}">${v[1]}</button>`).join("");
+function show(){let h=location.hash.slice(1);if(!V.some(v=>v[0]===h))h="beranda";V.forEach(v=>$("#"+v[0]).hidden=v[0]!==h);document.querySelectorAll("#nav button").forEach(b=>b.setAttribute("aria-current",b.dataset.v===h));scrollTo(0,0)}
+function go(v){location.hash=v}
+document.addEventListener("click",e=>{const d=e.target.closest("[data-go],[data-v]");if(d)go(d.dataset.go||d.dataset.v)});
+addEventListener("hashchange",show);show();
+const net=()=>$("#net").textContent=navigator.onLine?"📶 Daring":"📴 Luring";addEventListener("online",net);addEventListener("offline",net);net();
+$("#dm").onclick=()=>{const r=document.documentElement,d=r.dataset.theme==="dark"||(!r.dataset.theme&&matchMedia("(prefers-color-scheme:dark)").matches);r.dataset.theme=d?"light":"dark"};
+const L=[["id","ID"],["ar","العربية"],["en","English"],["ur","اردو"],["hi","हिन्दी"],["th","ไทย"],["zh","中文"],["ko","한국어"],["ja","日本語"],["ru","Русский"],["de","Deutsch"],["fr","Français"],["es","Español"]];
+$("#lang").innerHTML=L.map(l=>`<option value="${l[0]}">${l[1]}</option>`).join("");
+$("#lang").onchange=e=>{const v=e.target.value;document.documentElement.lang=v;document.documentElement.dir=(v==="ar"||v==="ur")?"rtl":"ltr";$("#langnote").hidden=v==="id"};
+// tokoh
+const S=[
+["Abu Ja’far Muhammad bin Jarir al-Tabari","Jāmiʿ al-Bayān ʿan Ta’wīl Āy al-Qur’ān","Klasik (224–310 H / 839–923 M)","Parafrasa editorial terinspirasi karya tersebut: mengkaji ayat dengan mengumpulkan riwayat secara kritis dan menimbang ragam bacaan serta makna bahasa untuk menyaring penafsiran yang paling kuat argumentasinya.","Mufasir klasik yang menghimpun korpus tafsir bil ma’tsur; rujukan utama generasi tafsir berikutnya."],
+["Abdul Hayy al-Farmawi","Al-Bidāyah fī al-Tafsīr al-Mawḍūʿī","Metodologi tematik","Parafrasa editorial terinspirasi karya tersebut: tafsir tematik dimulai dengan mengumpulkan ayat yang setema lalu menelaah konteksnya secara runtut.","Perumus langkah-langkah metode tafsir tematik."],
+["Amin al-Khuli","Manāhij Tajdīd fī al-Naḥw wa al-Balāghah wa al-Tafsīr wa al-Adab","Metodologi sastra","Parafrasa editorial terinspirasi karya tersebut: kajian bahasa dan sastra menjadi pintu memahami teks.","Karya metodologis dan sastra, bukan tafsir lengkap."],
+["Fazlur Rahman","Major Themes of the Qur’an","Kontemporer","Parafrasa editorial terinspirasi karya tersebut: membaca tema besar Al-Qur’an membantu melihat pesan secara utuh.","Kajian tematik, bukan tafsir ayat per ayat."],
+["Muhammad al-Tahir Ibn Ashur","Al-Taḥrīr wa al-Tanwīr","Modern","Parafrasa editorial terinspirasi karya tersebut: penafsiran yang memperhatikan bahasa, tujuan syariat, dan konteks pembacanya.","Mufasir modern dengan perhatian pada bahasa dan maqashid."]];
+let i=0,play=true,tm;
+const ill=n=>`<svg viewBox="0 0 200 240" role="img" aria-label="Ilustrasi editorial abstrak ${esc(n)}, bukan potret asli"><rect width="200" height="240" fill="#E8DDC2"/><circle cx="100" cy="95" r="42" fill="#B08A47"/><path d="M20 240c0-62 36-88 80-88s80 26 80 88z" fill="#12303F"/><path d="M62 70c8-34 68-34 76 0z" fill="#F2EBD8"/></svg>`;
+function draw(){const s=S[i];$("#slide").innerHTML=`<div>${ill(s[0])}<div class="cap">karikatur/interpretasi editorial, bukan potret asli</div></div><div><span class="tag" style="background:#F1E7D0;color:#7a5a00">${s[2]}</span><h2>${s[0]}</h2><p style="color:var(--mut)">Karya Utama: <b><i>${s[1]}</i></b></p><blockquote>${s[3]}</blockquote><p>${s[4]}</p><p><a target="_blank" rel="noopener" href="https://search.worldcat.org/search?q=${encodeURIComponent(s[1])}">↗ Cari rujukan bibliografis (katalog WorldCat, belum diverifikasi)</a> &nbsp; <button class="dk" data-go="ayat">Telaah Ayat dengan Mufasir Ini</button></p></div>`;
+$("#dots").innerHTML=S.map((_,k)=>`<button class="dot" aria-label="Tokoh ${k+1}" aria-current="${k===i}" data-k="${k}"></button>`).join("")}
+function mv(n){i=(n+S.length)%S.length;draw()}
+function tick(){clearInterval(tm);if(play&&!matchMedia("(prefers-reduced-motion:reduce)").matches)tm=setInterval(()=>mv(i+1),3000)}
+$("#prev").onclick=()=>{mv(i-1);tick()};$("#next").onclick=()=>{mv(i+1);tick()};
+$("#dots").onclick=e=>{if(e.target.dataset.k){mv(+e.target.dataset.k);tick()}};
+$("#pp").onclick=e=>{play=!play;e.target.textContent=play?"⏸":"▶";e.target.setAttribute("aria-label",play?"Jeda":"Lanjut");e.target.setAttribute("aria-pressed",!play);tick()};
+draw();tick();
+$("#works").innerHTML=[...S,["Hamka","Tafsir Al-Azhar","Nusantara","",""],["M. Quraish Shihab","Tafsir Al-Mishbah","Nusantara","",""]].map(s=>`<div class="card tc"><div><span class="tag">${s[2]}</span><h3>${s[0]}</h3><p><i>${s[1]}</i></p><p style="color:var(--mut)">${s[4]}</p></div><div class="ft"><a target="_blank" rel="noopener" href="https://search.worldcat.org/search?q=${encodeURIComponent(s[1])}">Cari di WorldCat ↗</a></div></div>`).join("");
+// tema
+const T=[["Sosial","Kelestarian Lingkungan & Ekologi","حماية البيئة وعمارة الأرض","Amanah kekhalifahan manusia dalam memelihara keseimbangan kosmis (mizan), konservasi alam, dan larangan merusak bumi.",["Ar-Rūm 30:41","Al-Baqarah 2:30"]],
+["Sosial","Keadilan Sosial & Supremasi Hukum","العدل والقسط والحقوق الإنسانية","Penegakan keadilan yang objektif dan tanpa pandang bulu, bahkan terhadap diri sendiri, keluarga, maupun kaum yang dibenci.",["An-Nisā’ 4:135"]],
+["Etika","Relasi Keluarga, Sakinah & Rahmah","الأسرة والمودة والرحمة","Pondasi relasi keluarga yang dibangun atas prinsip musyawarah, kasih sayang, dan keadilan gender.",["Ar-Rūm 30:21"]],
+["Keilmuan","Integritas Keilmuan, Riset & Nalar Kritis","العلم والبحث والمنهج النقدي","Kewajiban menuntut ilmu, verifikasi data, menghargai bukti objektif (burhan), dan kerendahan hati intelektual.",["Al-Mujādilah 58:11"]],
+["Etika","Ketenangan Batin & Kesehatan Mental","طمأنينة النفس والصحة النفسية","Manajemen stres, resiliensi spiritual menghadapi ujian hidup, zikir, dan jiwa yang damai (an-nafs al-muthma’innah).",["Ar-Raʿd 13:28"]],
+["Etika","Etika, Integritas Moral & Akhlak Mulia","مكارم الأخلاق والاستقامة","Pembentukan karakter personal yang luhur, kejujuran, amanah, kerendahan hati, dan kesantunan bertutur.",["Al-Ḥujurāt 49:11–12"]],
+["Keilmuan","Verifikasi Informasi di Era Digital","التثبت والتبين في عصر المعلومات الرقمية","Tabayyun terhadap kabar, kehati-hatian menyebarkan informasi, dan literasi digital yang bertanggung jawab.",["Al-Ḥujurāt 49:6"]]];
+$("#tg").innerHTML=T.map((t,k)=>`<div class="card tc"><div><div class="row"><span class="tag">${t[0]}</span><span class="ar" lang="ar" dir="rtl">${t[2]}</span></div><h3>${t[1]}</h3><p style="color:var(--mut)">${t[3]}</p></div><div class="ft"><button data-ay="${k}">Tinjau Ayat →</button><button data-rc="${k}">Buka RCTO-R</button></div></div>`).join("");
+$("#at").innerHTML=T.map((t,k)=>`<option value="${k}">${t[1]}</option>`).join("");
+const Q={"30:41": ["ظَهَرَ ٱلْفَسَادُ فِى ٱلْبَرِّ وَٱلْبَحْرِ بِمَا كَسَبَتْ أَيْدِى ٱلنَّاسِ لِيُذِيقَهُم بَعْضَ ٱلَّذِى عَمِلُوا۟ لَعَلَّهُمْ يَرْجِعُونَ", "Telah nampak kerusakan di darat dan di laut disebabkan karena perbuatan tangan manusi, supay Allah merasakan kepada mereka sebahagian dari (akibat) perbuatan mereka, agar mereka kembali (ke jalan yang benar)."], "2:30": ["وَإِذْ قَالَ رَبُّكَ لِلْمَلَٰٓئِكَةِ إِنِّى جَاعِلٌ فِى ٱلْأَرْضِ خَلِيفَةً قَالُوٓا۟ أَتَجْعَلُ فِيهَا مَن يُفْسِدُ فِيهَا وَيَسْفِكُ ٱلدِّمَآءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ قَالَ إِنِّىٓ أَعْلَمُ مَا لَا تَعْلَمُونَ", "Ingatlah ketika Tuhanmu berfirman kepada para Malaikat: \"Sesungguhnya Aku hendak menjadikan seorang khalifah di muka bumi\". Mereka berkata: \"Mengapa Engkau hendak menjadikan (khalifah) di bumi itu orang yang akan membuat kerusakan padanya dan menumpahkan darah, padahal kami senantiasa bertasbih dengan memuji Engkau dan mensucikan Engkau?\" Tuhan berfirman: \"Sesungguhnya Aku mengetahui apa yang tidak kamu ketahui\"."], "4:135": ["يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُونُوا۟ قَوَّٰمِينَ بِٱلْقِسْطِ شُهَدَآءَ لِلَّهِ وَلَوْ عَلَىٰٓ أَنفُسِكُمْ أَوِ ٱلْوَٰلِدَيْنِ وَٱلْأَقْرَبِينَ إِن يَكُنْ غَنِيًّا أَوْ فَقِيرًا فَٱللَّهُ أَوْلَىٰ بِهِمَا فَلَا تَتَّبِعُوا۟ ٱلْهَوَىٰٓ أَن تَعْدِلُوا۟ وَإِن تَلْوُۥٓا۟ أَوْ تُعْرِضُوا۟ فَإِنَّ ٱللَّهَ كَانَ بِمَا تَعْمَلُونَ خَبِيرًا", "Wahai orang-orang yang beriman, jadilah kamu orang yang benar-benar penegak keadilan, menjadi saksi karena Allah biarpun terhadap dirimu sendiri atau ibu bapa dan kaum kerabatmu. Jika ia kaya ataupun miskin, maka Allah lebih tahu kemaslahatannya. Maka janganlah kamu mengikuti hawa nafsu karena ingin menyimpang dari kebenaran. Dan jika kamu memutar balikkan (kata-kata) atau enggan menjadi saksi, maka sesungguhnya Allah adalah Maha Mengetahui segala apa yang kamu kerjakan."], "30:21": ["وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً إِنَّ فِى ذَٰلِكَ لَءَايَٰتٍ لِّقَوْمٍ يَتَفَكَّرُونَ", "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir."], "58:11": ["يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِذَا قِيلَ لَكُمْ تَفَسَّحُوا۟ فِى ٱلْمَجَٰلِسِ فَٱفْسَحُوا۟ يَفْسَحِ ٱللَّهُ لَكُمْ وَإِذَا قِيلَ ٱنشُزُوا۟ فَٱنشُزُوا۟ يَرْفَعِ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ مِنكُمْ وَٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ دَرَجَٰتٍ وَٱللَّهُ بِمَا تَعْمَلُونَ خَبِيرٌ", "Hai orang-orang beriman apabila dikatakan kepadamu: \"Berlapang-lapanglah dalam majlis\", maka lapangkanlah niscaya Allah akan memberi kelapangan untukmu. Dan apabila dikatakan: \"Berdirilah kamu\", maka berdirilah, niscaya Allah akan meninggikan orang-orang yang beriman di antaramu dan orang-orang yang diberi ilmu pengetahuan beberapa derajat. Dan Allah Maha Mengetahui apa yang kamu kerjakan."], "13:28": ["ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ ٱللَّهِ أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ", "(yaitu) orang-orang yang beriman dan hati mereka manjadi tenteram dengan mengingat Allah. Ingatlah, hanya dengan mengingati Allah-lah hati menjadi tenteram."], "49:11": ["يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا يَسْخَرْ قَوْمٌ مِّن قَوْمٍ عَسَىٰٓ أَن يَكُونُوا۟ خَيْرًا مِّنْهُمْ وَلَا نِسَآءٌ مِّن نِّسَآءٍ عَسَىٰٓ أَن يَكُنَّ خَيْرًا مِّنْهُنَّ وَلَا تَلْمِزُوٓا۟ أَنفُسَكُمْ وَلَا تَنَابَزُوا۟ بِٱلْأَلْقَٰبِ بِئْسَ ٱلِٱسْمُ ٱلْفُسُوقُ بَعْدَ ٱلْإِيمَٰنِ وَمَن لَّمْ يَتُبْ فَأُو۟لَٰٓئِكَ هُمُ ٱلظَّٰلِمُونَ", "Hai orang-orang yang beriman, janganlah sekumpulan orang laki-laki merendahkan kumpulan yang lain, boleh jadi yang ditertawakan itu lebih baik dari mereka. Dan jangan pula sekumpulan perempuan merendahkan kumpulan lainnya, boleh jadi yang direndahkan itu lebih baik. Dan janganlah suka mencela dirimu sendiri dan jangan memanggil dengan gelaran yang mengandung ejekan. Seburuk-buruk panggilan adalah (panggilan) yang buruk sesudah iman dan barangsiapa yang tidak bertobat, maka mereka itulah orang-orang yang zalim."], "49:12": ["يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱجْتَنِبُوا۟ كَثِيرًا مِّنَ ٱلظَّنِّ إِنَّ بَعْضَ ٱلظَّنِّ إِثْمٌ وَلَا تَجَسَّسُوا۟ وَلَا يَغْتَب بَّعْضُكُم بَعْضًا أَيُحِبُّ أَحَدُكُمْ أَن يَأْكُلَ لَحْمَ أَخِيهِ مَيْتًا فَكَرِهْتُمُوهُ وَٱتَّقُوا۟ ٱللَّهَ إِنَّ ٱللَّهَ تَوَّابٌ رَّحِيمٌ", "Hai orang-orang yang beriman, jauhilah kebanyakan purba-sangka (kecurigaan), karena sebagian dari purba-sangka itu dosa. Dan janganlah mencari-cari keburukan orang dan janganlah menggunjingkan satu sama lain. Adakah seorang diantara kamu yang suka memakan daging saudaranya yang sudah mati? Maka tentulah kamu merasa jijik kepadanya. Dan bertakwalah kepada Allah. Sesungguhnya Allah Maha Penerima Taubat lagi Maha Penyayang."], "49:6": ["يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِن جَآءَكُمْ فَاسِقٌۢ بِنَبَإٍ فَتَبَيَّنُوٓا۟ أَن تُصِيبُوا۟ قَوْمًۢا بِجَهَٰلَةٍ فَتُصْبِحُوا۟ عَلَىٰ مَا فَعَلْتُمْ نَٰدِمِينَ", "Hai orang-orang yang beriman, jika datang kepadamu orang fasik membawa suatu berita, maka periksalah dengan teliti agar kamu tidak menimpakan suatu musibah kepada suatu kaum tanpa mengetahui keadaannya yang menyebabkan kamu menyesal atas perbuatanmu itu."]};
+const av=()=>{const t=T[$("#at").value];let h="";
+ t[4].forEach(r=>{const m=r.match(/(\d+):(\d+)(?:\u2013(\d+))?/);if(!m)return;for(let a=+m[2];a<=+(m[3]||m[2]);a++){const k=m[1]+":"+a,q=Q[k];
+  h+=q?`<div class="card" style="margin:.8rem 0"><p><span class="tag u">${esc(r.replace(/\s*\d+:.*$/,""))} ${k}</span> <span class="tag">Teks Al-Qur’an (Tanzil)</span> <span class="tag u">Terjemahan (edisi belum diverifikasi)</span></p><p lang="ar" dir="rtl" style="font-family:Amiri,'Noto Naskh Arabic',serif;font-size:1.9rem;line-height:2.1;margin:.4rem 0">${q[0]}</p><p>${esc(q[1])}</p></div>`:`<p><span class="tag u">${k}</span> teks belum dimuat.</p>`}});
+ $("#av").innerHTML=h+'<p style="color:var(--mut);font-size:.9rem">Sumber teks Arab: <a target="_blank" rel="noopener" href="https://tanzil.net">Tanzil.net</a>, didistribusikan di bawah Creative Commons Attribution 3.0; boleh disalin tanpa perubahan, tidak boleh diubah. Terjemahan Indonesia (Kemenag RI) dari kompilasi Tanzil, hanya untuk keperluan non-komersial. Dihimpun lewat paket quran-json 1.0.1. Akses: 28 Okt 2026.</p>'};$("#at").onchange=av;av();
+document.addEventListener("click",e=>{const a=e.target.dataset.ay,r=e.target.dataset.rc;if(a!==undefined){$("#at").value=a;av();go("ayat")}if(r!==undefined){theme=T[r][1];$("#custom").value="";document.querySelectorAll("#themes button").forEach(b=>b.setAttribute("aria-pressed",b.textContent===theme));upd();go("belajar")}});
+// RCTO-R
+let theme="";
+$("#themes").innerHTML=T.map(t=>`<button aria-pressed="false">${t[1]}</button>`).join("");
+$("#themes").onclick=e=>{if(e.target.tagName!=="BUTTON")return;document.querySelectorAll("#themes button").forEach(b=>b.setAttribute("aria-pressed",b===e.target));theme=e.target.textContent;$("#custom").value=""};
+$("#custom").oninput=e=>{theme=e.target.value;document.querySelectorAll("#themes button").forEach(b=>b.setAttribute("aria-pressed",false))};
+$("#refs").innerHTML=["al-Farmawi, Al-Bidāyah","Fazlur Rahman, Major Themes","al-Tabari, Jāmiʿ al-Bayān","Ibn Ashur, Al-Taḥrīr","Hamka, Tafsir Al-Azhar","M. Quraish Shihab, Tafsir Al-Mishbah"].map(k=>`<button aria-pressed="false">${k}</button>`).join("");
+$("#refs").onclick=e=>{if(e.target.tagName==="BUTTON")e.target.setAttribute("aria-pressed",e.target.getAttribute("aria-pressed")!=="true")};
+const RULES="ATURAN SISTEM (tetap):\n- Gunakan hanya sumber dari koleksi yang disetujui; sertakan sitasi yang dapat dibuka.\n- Bedakan kutipan langsung, parafrasa, dan ringkasan.\n- Jangan mengarang teks ayat, terjemahan, data buku, metadata artikel, atau kutipan ulama.\n- Nyatakan bila bukti belum lengkap atau ulama berbeda pendapat.\n- Jangan mengeluarkan fatwa; arahkan ke guru yang berkualifikasi.";
+function buildPrompt(){const refs=[...document.querySelectorAll("#refs [aria-pressed=true]")].map(b=>b.textContent);return `ROLE: ${$("#r").value}\nCONTEXT: ${$("#c").value}\nTASK: ${$("#t").value}\nOUTPUT: ${$("#o").value}\nREFERENCES: ${refs.join("; ")||"(belum dipilih)"}\nTEMA: ${theme.trim()||"(belum dipilih)"}\n\n${RULES}`}
+function upd(){$("#live").textContent=buildPrompt()}
+$("#belajar").addEventListener("input",upd);$("#belajar").addEventListener("click",()=>setTimeout(upd,0));
+$("#cp").onclick=async()=>{try{await navigator.clipboard.writeText(buildPrompt());$("#cpm").textContent="Tersalin."}catch(e){$("#cpm").textContent="Salin gagal. Blok teks lalu salin manual."}};upd();
+const AI=[["ChatGPT","https://chatgpt.com/"],["Claude","https://claude.ai/new"],["Gemini","https://gemini.google.com/app"],["Grok","https://grok.com/"],["Kimi","https://www.kimi.com/"],["Qwen","https://chat.qwen.ai/"],["DeepSeek","https://chat.deepseek.com/"]];
+$("#ai").innerHTML=AI.map(a=>`<a class="pill" target="_blank" rel="noopener" href="${a[1]}" data-ai="${a[0]}">${a[0]} ↗</a>`).join("");
+$("#ai").addEventListener("click",async e=>{const a=e.target.closest("[data-ai]");if(!a)return;try{await navigator.clipboard.writeText(buildPrompt());$("#cpm").textContent="Tersalin. Tempel di "+a.dataset.ai+"."}catch(x){$("#cpm").textContent="Salin otomatis gagal. Salin manual dari kotak prompt."}});
+// jurnal
+function jl(){const q=encodeURIComponent($("#q").value||"");$("#jl").innerHTML=[["Crossref","https://search.crossref.org/search/works?q="+q],["OpenAlex","https://openalex.org/works?search="+q],["Scopus Sources","https://www.elsevier.com/products/scopus/content"],["SINTA Jurnal","https://sinta.kemdiktisaintek.go.id/journals?q="+q]].map(x=>`<a class="pill" target="_blank" rel="noopener" href="${x[1]}">${x[0]} ↗</a>`).join("")}
+$("#q").oninput=jl;jl();
+// ekspor ringkasan
+function sumModel(){const t=theme.trim(),th=T.find(x=>x[1]===t),refs=[...document.querySelectorAll("#refs [aria-pressed=true]")].map(b=>b.textContent);
+ return{title:"Ringkasan Tematik: "+(t||"(tema belum dipilih)"),meta:"Tab Light, prototipe demo. Disusun "+new Date().toLocaleDateString("id-ID")+". Data contoh, belum diverifikasi editor.",
+ secs:[["Prompt RCTO-R",["Role: "+$("#r").value,"Context: "+$("#c").value,"Task: "+$("#t").value,"Output: "+$("#o").value,"References: "+(refs.join("; ")||"(belum dipilih)")]],
+ ["Ringkasan tema (editorial tim, belum ditinjau)",[th?th[3]:"Tema kustom: belum ada ringkasan."]],
+ ["Rujukan ayat (usulan awal, belum diverifikasi)",[th?th[4].join("; "):"Belum ada rujukan; cari dari sumber yang diverifikasi."]],
+ ["Pertanyaan inkuiri",["Pahami: apa yang dikatakan ayat-ayat terkait tema ini, dan apa konteksnya?","Terapkan: bagaimana dua penafsir memandangnya, dan apa perbedaannya?","Renungkan: apa satu tindakan nyata minggu ini?"]],
+ ["Aturan sistem",RULES.split("\n").slice(1).map(x=>x.replace(/^- /,""))],
+ ["Sitasi dan metadata",["Belum diverifikasi: penulis, judul lengkap, edisi, penerbit, jilid, halaman, DOI, tanggal akses."]],
+ ["Catatan integritas",["Teks Arab: Tanzil.net (CC BY 3.0). Terjemahan Indonesia: edisi belum diverifikasi, non-komersial. Bukan fatwa; untuk masalah hukum tanyakan guru yang berkualifikasi."]]]}}
+async function saveFile(name,blob){const x=$("#xm");try{const dl=window.claude&&await window.claude.use("downloads");if(dl){await dl.save({filename:name,data:blob});x.textContent="Berkas disimpan: "+name;return}}catch(e){if(e&&e.code==="declined"){x.textContent="Unduhan dibatalkan.";return}}
+ try{const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();a.remove();x.textContent="Unduhan dimulai: "+name+". Jika tidak muncul, gunakan Cetak lalu Simpan sebagai PDF."}catch(e){x.textContent="Unduhan tidak tersedia di tampilan ini. Gunakan Cetak lalu Simpan sebagai PDF."}}
+$("#xd").onclick=async()=>{const d=window.docx;if(!d){$("#xm").textContent="Pustaka DOCX belum termuat. Periksa koneksi lalu muat ulang.";return}
+ const m=sumModel(),ch=[new d.Paragraph({heading:d.HeadingLevel.TITLE,children:[new d.TextRun(m.title)]}),new d.Paragraph({children:[new d.TextRun({text:m.meta,italics:true})]})];
+ m.secs.forEach(s=>{ch.push(new d.Paragraph({heading:d.HeadingLevel.HEADING_2,children:[new d.TextRun(s[0])]}));s[1].forEach(l=>ch.push(new d.Paragraph({bullet:{level:0},children:[new d.TextRun(l)]})))});
+ try{saveFile("tab-light-ringkasan.docx",await d.Packer.toBlob(new d.Document({sections:[{children:ch}]})))}catch(e){$("#xm").textContent="Gagal membuat DOCX."}};
+const pdfSafe=s=>s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[\u02BF\u02BE\u2019]/g,"'").replace(/[\u2013\u2212]/g,"-").replace(/[^\x20-\x7E]/g,"");
+$("#xp").onclick=()=>{if(!window.jspdf){$("#xm").textContent="Pustaka PDF belum termuat. Periksa koneksi lalu muat ulang.";return}
+ try{const m=sumModel(),p=new window.jspdf.jsPDF({unit:"mm",format:"a4"});let y=20;const W=170,ln=(t,sz,b)=>{p.setFont("helvetica",b?"bold":"normal");p.setFontSize(sz);p.splitTextToSize(pdfSafe(t),W).forEach(l=>{if(y>280){p.addPage();y=20}p.text(l,20,y);y+=sz*0.5})};
+ ln(m.title,17,1);y+=1;ln(m.meta,9);y+=3;m.secs.forEach(s=>{ln(s[0],12,1);s[1].forEach(l=>ln("- "+l,10));y+=3});
+ saveFile("tab-light-ringkasan.pdf",p.output("blob"))}catch(e){$("#xm").textContent="Gagal membuat PDF."}};
+// waktu salat
+const C=[["Jakarta",-6.2088,106.8456,7],["Tangerang",-6.1783,106.6319,7],["Bandung",-6.9175,107.6191,7],["Yogyakarta",-7.7956,110.3695,7],["Semarang",-6.9667,110.4167,7],["Surabaya",-7.2575,112.7521,7],["Medan",3.5952,98.6722,7],["Makassar",-5.1477,119.4327,8],["Denpasar",-8.65,115.2167,8],["Jayapura",-2.5337,140.7181,9]];
+$("#loc").innerHTML="<option value=''>Pilih kota…</option>"+C.map((c,k)=>`<option value="${k}">${c[0]}</option>`).join("")+"<option value='m'>Isi koordinat manual</option>";
+$("#loc").onchange=e=>{const c=C[e.target.value];if(c){$("#lat").value=c[1];$("#lng").value=c[2];$("#tz").value=c[3]}};
+{const n=new Date();$("#dt").value=n.getFullYear()+"-"+String(n.getMonth()+1).padStart(2,"0")+"-"+String(n.getDate()).padStart(2,"0")}
+function pt(y,m,d,lat,lng,tz){const R=Math.PI/180,sn=x=>Math.sin(x*R),cs=x=>Math.cos(x*R),ad=x=>Math.acos(x)/R,fx=(a,n)=>a-n*Math.floor(a/n);let Y=y,M=m;if(M<=2){Y--;M+=12}const A=Math.floor(Y/100),B=2-A+Math.floor(A/4),jd=Math.floor(365.25*(Y+4716))+Math.floor(30.6001*(M+1))+d+B-1524.5,n=jd-2451545.0,g=fx(357.529+0.98560028*n,360),q=fx(280.459+0.98564736*n,360),L=fx(q+1.915*sn(g)+0.020*sn(2*g),360),e=23.439-0.00000036*n,RA=fx(Math.atan2(cs(e)*sn(L),cs(L))/R,360)/15,dec=Math.asin(sn(e)*sn(L))/R,eq=fx(q/15-RA+12,24)-12,noon=12+tz-lng/15-eq,T=a=>ad((-sn(a)-sn(dec)*sn(lat))/(cs(dec)*cs(lat)))/15,aa=-Math.atan(1/(1+Math.tan(Math.abs(lat-dec)*R)))/R,at=ad((-sn(aa)-sn(dec)*sn(lat))/(cs(dec)*cs(lat)))/15;return{"Subuh":noon-T(20),"Terbit":noon-T(0.833),"Dzuhur":noon,"Ashar":noon+at,"Maghrib":noon+T(0.833),"Isya":noon+T(18)}}
+const hm=m=>String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");
+$("#hs").onclick=()=>{const lat=parseFloat($("#lat").value),lng=parseFloat($("#lng").value),tz=+$("#tz").value,p=$("#dt").value.split("-").map(Number);
+ if(!isFinite(lat)||!isFinite(lng)||p.length<3||!p[0]||Math.abs(lat)>60){$("#ptr").innerHTML='<div class="note" role="alert">Pilih kota atau isi lintang dan bujur yang valid (lintang antara −60° dan 60°) serta tanggal.</div>';return}
+ const r=pt(p[0],p[1],p[2],lat,lng,tz);
+ const rows=Object.keys(r).map(k=>{const h=r[k]*60;if(!isFinite(h))return `<tr><td>${k}</td><td>—</td></tr>`;const m=k==="Terbit"?Math.floor(h)-2:Math.ceil(h)+2;return `<tr><td>${k}</td><td><b>${hm(((m%1440)+1440)%1440)}</b></td></tr>`}).join("");
+ $("#ptr").innerHTML=`<table style="width:100%;font-size:1.2rem"><caption style="text-align:left;color:var(--mut)">${$("#dt").value}, ${$("#loc").selectedOptions[0]?.textContent||"koordinat manual"} (${lat}, ${lng}), UTC+${tz}</caption>${rows}</table><p style="color:var(--mut)">Dihitung pada ${new Date().toLocaleString("id-ID")} di perangkat Anda. Bukan data resmi.</p>`};
+// zayed klien
+$("#zs").onclick=async()=>{const ep=$("#zep").value.trim().replace(/\/+$/,""),q=$("#zq").value.trim(),o=$("#zo");
+ if(!ep.startsWith("https://")){o.innerHTML='<div class="note" role="alert">Isi alamat server Zayed yang diawali https://. Server belum ada? Gunakan paket zayed-backend.</div>';return}
+ if(!q)return;o.textContent="Mencari di koleksi sumber…";
+ try{const r=await fetch(ep+"/api/zayed",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:q})}),j=await r.json();
+  let h="";if(j.answer)h+=`<div class="card"><span class="tag u">Penjelasan AI</span><p>${esc(j.answer)}</p></div>`;if(j.message)h+=`<div class="note">${esc(j.message)}</div>`;if(j.notice)h+=`<p style="color:var(--mut)">${esc(j.notice)}</p>`;
+  (j.citations||j.fallback_passages||[]).forEach(c=>h+=`<div class="card" style="margin:.6rem 0"><span class="tag">${esc(c.id)}</span> <span class="tag u">${esc(c.status)}</span> <b>${esc(c.ref)}</b><p lang="ar" dir="rtl" style="font-family:Amiri,serif;font-size:1.6rem">${esc(c.arabic)}</p><p>${esc(c.translation_id)}</p><small>${esc(c.source)}. ${esc(c.license)} Akses ${esc(c.accessed)}.</small></div>`);
+  o.innerHTML=h}catch(e){o.innerHTML='<div class="note" role="alert">Tidak dapat terhubung ke server. Di halaman yang diterbitkan di claude.ai permintaan ke situs lain diblokir; gunakan hosting sendiri dan setel ALLOWED_ORIGINS di server.</div>'}};
+// modul tajwid
+const HJ=[["ء","hamzah"],["ب","ba"],["ت","ta"],["ث","tsa"],["ج","jim"],["ح","ha"],["خ","kha"],["د","dal"],["ذ","dzal"],["ر","ra"],["ز","zay"],["س","sin"],["ش","syin"],["ص","shad"],["ض","dhad"],["ط","tha"],["ظ","zha"],["ع","ain"],["غ","ghain"],["ف","fa"],["ق","qaf"],["ك","kaf"],["ل","lam"],["م","mim"],["ن","nun"],["ه","ha (hu)"],["و","waw"],["ي","ya"]];
+const NH=l=>"ءهعحغخ".includes(l)?["Izhar halqi","Dibaca jelas tanpa dengung."]:"ينمو".includes(l)?["Idgham bighunnah","Dilebur ke huruf berikutnya dengan dengung. Bila nun dan huruf itu dalam satu kata, umumnya dibaca jelas (izhar mutlak); tanyakan guru."]:"لر".includes(l)?["Idgham bila ghunnah","Dilebur ke huruf berikutnya tanpa dengung."]:l==="ب"?["Iqlab","Nun atau tanwin berubah menjadi bunyi mim dengan dengung, bibir dirapatkan."]:["Ikhfa haqiqi","Dibaca samar, antara izhar dan idgham, dengan dengung."];
+$("#lh").innerHTML=HJ.map(h=>`<button aria-pressed="false" aria-label="${h[1]}" style="font-family:Amiri,serif;font-size:1.5rem;min-width:48px">${h[0]}</button>`).join("");
+$("#lh").onclick=e=>{const b=e.target.closest("button");if(!b)return;document.querySelectorAll("#lh button").forEach(x=>x.setAttribute("aria-pressed",x===b));const l=b.textContent,n=HJ.find(h=>h[0]===l)[1],r=NH(l);$("#lr").innerHTML=`Nun mati atau tanwin bertemu <b>${l}</b> (${n}): <b>${r[0]}</b>. ${r[1]}`};
+const TJ=[["Makharijul huruf","Lima area: al-jauf (rongga mulut; huruf mad), al-halq (tenggorokan), al-lisan (lidah), asy-syafatain (dua bibir), al-khaisyum (rongga hidung; dengung)."],
+["Mim mati","Idgham mimi (bertemu mim, dengan dengung), ikhfa syafawi (bertemu ba, samar dengan dengung ringan), izhar syafawi (bertemu huruf lain, dibaca jelas)."],
+["Mad","Mad thabi’i (asli) dibaca dua harakat. Mad far’i muncul karena sebab hamzah atau sukun; panjangnya bervariasi menurut riwayat, jadi ikuti bimbingan guru."],
+["Qalqalah","Pantulan ringan pada huruf ق ط ب ج د bila sukun. Biasanya lebih kuat saat berhenti (waqaf)."],
+["Ghunnah","Dengung pada nun dan mim bertasydid, sekitar dua harakat."]];
+$("#tj").innerHTML=TJ.map(t=>`<div class="card tc" style="margin:0"><div><h3>${t[0]}</h3><p>${t[1]}</p></div><div class="ft"><span class="tag u">Belum ditinjau ahli</span></div></div>`).join("");
+// tahsin
+let mr,ch=[];$("#rec").onclick=async()=>{if(mr&&mr.state==="recording"){mr.stop();return}
+try{const s=await navigator.mediaDevices.getUserMedia({audio:true});mr=new MediaRecorder(s);ch=[];mr.ondataavailable=e=>ch.push(e.data);mr.onstop=()=>{s.getTracks().forEach(t=>t.stop());$("#au").src=URL.createObjectURL(new Blob(ch));$("#au").hidden=false;$("#rec").textContent="● Mulai rekam";$("#rs").textContent="Selesai."};mr.start();$("#rec").textContent="■ Berhenti";$("#rs").textContent="Merekam…"}catch(e){$("#rs").textContent="Mikrofon tidak tersedia atau izin ditolak."}};
+// catatan
+function nl(){let a=[];try{a=JSON.parse(localStorage.getItem("tl_notes")||"[]")}catch(e){}$("#nl").innerHTML=a.map((n,k)=>`<div class="note">${esc(n)} <button class="b3" data-del="${k}" style="padding:.2rem .7rem;min-height:36px">Hapus</button></div>`).join("")||"<p style='color:var(--mut)'>Belum ada catatan.</p>"}
+$("#sv").onclick=()=>{if(!$("#ok").checked){$("#sm").textContent="Centang persetujuan dulu.";return}if(!$("#nt").value.trim())return;try{const a=JSON.parse(localStorage.getItem("tl_notes")||"[]");a.push($("#nt").value);localStorage.setItem("tl_notes",JSON.stringify(a));$("#nt").value="";$("#sm").textContent="Tersimpan di perangkat ini."}catch(e){$("#sm").textContent="Penyimpanan browser tidak tersedia."}nl()};
+document.addEventListener("click",e=>{if(e.target.dataset.del!==undefined){try{const a=JSON.parse(localStorage.getItem("tl_notes")||"[]");a.splice(+e.target.dataset.del,1);localStorage.setItem("tl_notes",JSON.stringify(a))}catch(x){}nl()}});nl();
+</script>
+</body>
+</html>
