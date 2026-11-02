@@ -1,0 +1,229 @@
+{
+ "schema_version": 1,
+ "note": "Hanya item berstatus 'published' dipakai di produksi. Tambahkan entri tafsir (type 'tafsir') hanya dari edisi yang diverifikasi, lengkap dengan penulis, judul, edisi, penerbit, jilid, halaman, URL, tanggal akses.",
+ "items": [
+  {
+   "id": "S-30-41",
+   "type": "quran",
+   "ref": "Ar-Rum 30:41",
+   "surah": 30,
+   "ayah": 41,
+   "arabic": "ظَهَرَ ٱلْفَسَادُ فِى ٱلْبَرِّ وَٱلْبَحْرِ بِمَا كَسَبَتْ أَيْدِى ٱلنَّاسِ لِيُذِيقَهُم بَعْضَ ٱلَّذِى عَمِلُوا۟ لَعَلَّهُمْ يَرْجِعُونَ",
+   "translation_id": "Telah nampak kerusakan di darat dan di laut disebabkan karena perbuatan tangan manusi, supay Allah merasakan kepada mereka sebahagian dari (akibat) perbuatan mereka, agar mereka kembali (ke jalan yang benar).",
+   "retrieval_keywords_editorial": [
+    "lingkungan",
+    "kerusakan",
+    "darat",
+    "laut",
+    "alam",
+    "ekologi",
+    "bumi"
+   ],
+   "status": "unreviewed",
+   "source": {
+    "name": "Tanzil.net (via quran-json 1.0.1)",
+    "url": "https://tanzil.net",
+    "license": "Teks Arab: CC BY 3.0, tidak boleh diubah. Terjemahan Indonesia (Kemenag RI) dari kompilasi Tanzil: edisi/tahun belum terverifikasi, hanya non-komersial.",
+    "accessed": "2026-10-28"
+   }
+  },
+  {
+   "id": "S-2-30",
+   "type": "quran",
+   "ref": "Al-Baqarah 2:30",
+   "surah": 2,
+   "ayah": 30,
+   "arabic": "وَإِذْ قَالَ رَبُّكَ لِلْمَلَٰٓئِكَةِ إِنِّى جَاعِلٌ فِى ٱلْأَرْضِ خَلِيفَةً قَالُوٓا۟ أَتَجْعَلُ فِيهَا مَن يُفْسِدُ فِيهَا وَيَسْفِكُ ٱلدِّمَآءَ وَنَحْنُ نُسَبِّحُ بِحَمْدِكَ وَنُقَدِّسُ لَكَ قَالَ إِنِّىٓ أَعْلَمُ مَا لَا تَعْلَمُونَ",
+   "translation_id": "Ingatlah ketika Tuhanmu berfirman kepada para Malaikat: \"Sesungguhnya Aku hendak menjadikan seorang khalifah di muka bumi\". Mereka berkata: \"Mengapa Engkau hendak menjadikan (khalifah) di bumi itu orang yang akan membuat kerusakan padanya dan menumpahkan darah, padahal kami senantiasa bertasbih dengan memuji Engkau dan mensucikan Engkau?\" Tuhan berfirman: \"Sesungguhnya Aku mengetahui apa yang tidak kamu ketahui\".",
+   "retrieval_keywords_editorial": [
+    "khalifah",
+    "bumi",
+    "manusia",
+    "amanah",
+    "lingkungan"
+   ],
+   "status": "unreviewed",
+   "source": {
+    "name": "Tanzil.net (via quran-json 1.0.1)",
+    "url": "https://tanzil.net",
+    "license": "Teks Arab: CC BY 3.0, tidak boleh diubah. Terjemahan Indonesia (Kemenag RI) dari kompilasi Tanzil: edisi/tahun belum terverifikasi, hanya non-komersial.",
+    "accessed": "2026-10-28"
+   }
+  },
+  {
+   "id": "S-4-135",
+   "type": "quran",
+   "ref": "An-Nisa 4:135",
+   "surah": 4,
+   "ayah": 135,
+   "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُونُوا۟ قَوَّٰمِينَ بِٱلْقِسْطِ شُهَدَآءَ لِلَّهِ وَلَوْ عَلَىٰٓ أَنفُسِكُمْ أَوِ ٱلْوَٰلِدَيْنِ وَٱلْأَقْرَبِينَ إِن يَكُنْ غَنِيًّا أَوْ فَقِيرًا فَٱللَّهُ أَوْلَىٰ بِهِمَا فَلَا تَتَّبِعُوا۟ ٱلْهَوَىٰٓ أَن تَعْدِلُوا۟ وَإِن تَلْوُۥٓا۟ أَوْ تُعْرِضُوا۟ فَإِنَّ ٱللَّهَ كَانَ بِمَا تَعْمَلُونَ خَبِيرًا",
+   "translation_id": "Wahai orang-orang yang beriman, jadilah kamu orang yang benar-benar penegak keadilan, menjadi saksi karena Allah biarpun terhadap dirimu sendiri atau ibu bapa dan kaum kerabatmu. Jika ia kaya ataupun miskin, maka Allah lebih tahu kemaslahatannya. Maka janganlah kamu mengikuti hawa nafsu karena ingin menyimpang dari kebenaran. Dan jika kamu memutar balikkan (kata-kata) atau enggan menjadi saksi, maka sesungguhnya Allah adalah Maha Mengetahui segala apa yang kamu kerjakan.",
+   "retrieval_keywords_editorial": [
+    "adil",
+    "keadilan",
+    "saksi",
+    "hukum",
+    "kebenaran"
+   ],
+   "status": "unreviewed",
+   "source": {
+    "name": "Tanzil.net (via quran-json 1.0.1)",
+    "url": "https://tanzil.net",
+    "license": "Teks Arab: CC BY 3.0, tidak boleh diubah. Terjemahan Indonesia (Kemenag RI) dari kompilasi Tanzil: edisi/tahun belum terverifikasi, hanya non-komersial.",
+    "accessed": "2026-10-28"
+   }
+  },
+  {
+   "id": "S-30-21",
+   "type": "quran",
+   "ref": "Ar-Rum 30:21",
+   "surah": 30,
+   "ayah": 21,
+   "arabic": "وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً إِنَّ فِى ذَٰلِكَ لَءَايَٰتٍ لِّقَوْمٍ يَتَفَكَّرُونَ",
+   "translation_id": "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir.",
+   "retrieval_keywords_editorial": [
+    "keluarga",
+    "pasangan",
+    "kasih",
+    "sayang",
+    "sakinah",
+    "mawaddah",
+    "rahmah",
+    "suami",
+    "istri"
+   ],
+   "status": "unreviewed",
+   "source": {
+    "name": "Tanzil.net (via quran-json 1.0.1)",
+    "url": "https://tanzil.net",
+    "license": "Teks Arab: CC BY 3.0, tidak boleh diubah. Terjemahan Indonesia (Kemenag RI) dari kompilasi Tanzil: edisi/tahun belum terverifikasi, hanya non-komersial.",
+    "accessed": "2026-10-28"
+   }
+  },
+  {
+   "id": "S-58-11",
+   "type": "quran",
+   "ref": "Al-Mujadilah 58:11",
+   "surah": 58,
+   "ayah": 11,
+   "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِذَا قِيلَ لَكُمْ تَفَسَّحُوا۟ فِى ٱلْمَجَٰلِسِ فَٱفْسَحُوا۟ يَفْسَحِ ٱللَّهُ لَكُمْ وَإِذَا قِيلَ ٱنشُزُوا۟ فَٱنشُزُوا۟ يَرْفَعِ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ مِنكُمْ وَٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ دَرَجَٰتٍ وَٱللَّهُ بِمَا تَعْمَلُونَ خَبِيرٌ",
+   "translation_id": "Hai orang-orang beriman apabila dikatakan kepadamu: \"Berlapang-lapanglah dalam majlis\", maka lapangkanlah niscaya Allah akan memberi kelapangan untukmu. Dan apabila dikatakan: \"Berdirilah kamu\", maka berdirilah, niscaya Allah akan meninggikan orang-orang yang beriman di antaramu dan orang-orang yang diberi ilmu pengetahuan beberapa derajat. Dan Allah Maha Mengetahui apa yang kamu kerjakan.",
+   "retrieval_keywords_editorial": [
+    "ilmu",
+    "pengetahuan",
+    "derajat",
+    "lapang",
+    "majelis",
+    "belajar"
+   ],
+   "status": "unreviewed",
+   "source": {
+    "name": "Tanzil.net (via quran-json 1.0.1)",
+    "url": "https://tanzil.net",
+    "license": "Teks Arab: CC BY 3.0, tidak boleh diubah. Terjemahan Indonesia (Kemenag RI) dari kompilasi Tanzil: edisi/tahun belum terverifikasi, hanya non-komersial.",
+    "accessed": "2026-10-28"
+   }
+  },
+  {
+   "id": "S-13-28",
+   "type": "quran",
+   "ref": "Ar-Ra'd 13:28",
+   "surah": 13,
+   "ayah": 28,
+   "arabic": "ٱلَّذِينَ ءَامَنُوا۟ وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ ٱللَّهِ أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ",
+   "translation_id": "(yaitu) orang-orang yang beriman dan hati mereka manjadi tenteram dengan mengingat Allah. Ingatlah, hanya dengan mengingati Allah-lah hati menjadi tenteram.",
+   "retrieval_keywords_editorial": [
+    "tenang",
+    "hati",
+    "zikir",
+    "ingat",
+    "batin",
+    "stres",
+    "jiwa"
+   ],
+   "status": "unreviewed",
+   "source": {
+    "name": "Tanzil.net (via quran-json 1.0.1)",
+    "url": "https://tanzil.net",
+    "license": "Teks Arab: CC BY 3.0, tidak boleh diubah. Terjemahan Indonesia (Kemenag RI) dari kompilasi Tanzil: edisi/tahun belum terverifikasi, hanya non-komersial.",
+    "accessed": "2026-10-28"
+   }
+  },
+  {
+   "id": "S-49-11",
+   "type": "quran",
+   "ref": "Al-Hujurat 49:11",
+   "surah": 49,
+   "ayah": 11,
+   "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ لَا يَسْخَرْ قَوْمٌ مِّن قَوْمٍ عَسَىٰٓ أَن يَكُونُوا۟ خَيْرًا مِّنْهُمْ وَلَا نِسَآءٌ مِّن نِّسَآءٍ عَسَىٰٓ أَن يَكُنَّ خَيْرًا مِّنْهُنَّ وَلَا تَلْمِزُوٓا۟ أَنفُسَكُمْ وَلَا تَنَابَزُوا۟ بِٱلْأَلْقَٰبِ بِئْسَ ٱلِٱسْمُ ٱلْفُسُوقُ بَعْدَ ٱلْإِيمَٰنِ وَمَن لَّمْ يَتُبْ فَأُو۟لَٰٓئِكَ هُمُ ٱلظَّٰلِمُونَ",
+   "translation_id": "Hai orang-orang yang beriman, janganlah sekumpulan orang laki-laki merendahkan kumpulan yang lain, boleh jadi yang ditertawakan itu lebih baik dari mereka. Dan jangan pula sekumpulan perempuan merendahkan kumpulan lainnya, boleh jadi yang direndahkan itu lebih baik. Dan janganlah suka mencela dirimu sendiri dan jangan memanggil dengan gelaran yang mengandung ejekan. Seburuk-buruk panggilan adalah (panggilan) yang buruk sesudah iman dan barangsiapa yang tidak bertobat, maka mereka itulah orang-orang yang zalim.",
+   "retrieval_keywords_editorial": [
+    "etika",
+    "mengolok",
+    "olok",
+    "panggil",
+    "gelar",
+    "akhlak",
+    "hina"
+   ],
+   "status": "unreviewed",
+   "source": {
+    "name": "Tanzil.net (via quran-json 1.0.1)",
+    "url": "https://tanzil.net",
+    "license": "Teks Arab: CC BY 3.0, tidak boleh diubah. Terjemahan Indonesia (Kemenag RI) dari kompilasi Tanzil: edisi/tahun belum terverifikasi, hanya non-komersial.",
+    "accessed": "2026-10-28"
+   }
+  },
+  {
+   "id": "S-49-12",
+   "type": "quran",
+   "ref": "Al-Hujurat 49:12",
+   "surah": 49,
+   "ayah": 12,
+   "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱجْتَنِبُوا۟ كَثِيرًا مِّنَ ٱلظَّنِّ إِنَّ بَعْضَ ٱلظَّنِّ إِثْمٌ وَلَا تَجَسَّسُوا۟ وَلَا يَغْتَب بَّعْضُكُم بَعْضًا أَيُحِبُّ أَحَدُكُمْ أَن يَأْكُلَ لَحْمَ أَخِيهِ مَيْتًا فَكَرِهْتُمُوهُ وَٱتَّقُوا۟ ٱللَّهَ إِنَّ ٱللَّهَ تَوَّابٌ رَّحِيمٌ",
+   "translation_id": "Hai orang-orang yang beriman, jauhilah kebanyakan purba-sangka (kecurigaan), karena sebagian dari purba-sangka itu dosa. Dan janganlah mencari-cari keburukan orang dan janganlah menggunjingkan satu sama lain. Adakah seorang diantara kamu yang suka memakan daging saudaranya yang sudah mati? Maka tentulah kamu merasa jijik kepadanya. Dan bertakwalah kepada Allah. Sesungguhnya Allah Maha Penerima Taubat lagi Maha Penyayang.",
+   "retrieval_keywords_editorial": [
+    "prasangka",
+    "mencari-cari",
+    "gunjing",
+    "ghibah",
+    "etika",
+    "curiga"
+   ],
+   "status": "unreviewed",
+   "source": {
+    "name": "Tanzil.net (via quran-json 1.0.1)",
+    "url": "https://tanzil.net",
+    "license": "Teks Arab: CC BY 3.0, tidak boleh diubah. Terjemahan Indonesia (Kemenag RI) dari kompilasi Tanzil: edisi/tahun belum terverifikasi, hanya non-komersial.",
+    "accessed": "2026-10-28"
+   }
+  },
+  {
+   "id": "S-49-6",
+   "type": "quran",
+   "ref": "Al-Hujurat 49:6",
+   "surah": 49,
+   "ayah": 6,
+   "arabic": "يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا۟ إِن جَآءَكُمْ فَاسِقٌۢ بِنَبَإٍ فَتَبَيَّنُوٓا۟ أَن تُصِيبُوا۟ قَوْمًۢا بِجَهَٰلَةٍ فَتُصْبِحُوا۟ عَلَىٰ مَا فَعَلْتُمْ نَٰدِمِينَ",
+   "translation_id": "Hai orang-orang yang beriman, jika datang kepadamu orang fasik membawa suatu berita, maka periksalah dengan teliti agar kamu tidak menimpakan suatu musibah kepada suatu kaum tanpa mengetahui keadaannya yang menyebabkan kamu menyesal atas perbuatanmu itu.",
+   "retrieval_keywords_editorial": [
+    "informasi",
+    "berita",
+    "periksa",
+    "tabayyun",
+    "fasik",
+    "hoaks",
+    "digital",
+    "verifikasi",
+    "kabar"
+   ],
+   "status": "unreviewed",
+   "source": {
+    "name": "Tanzil.net (via quran-json 1.0.1)",
+    "url": "https://tanzil.net",
+    "license": "Teks Arab: CC BY 3.0, tidak boleh diubah. Terjemahan Indonesia (Kemenag RI) dari kompilasi Tanzil: edisi/tahun belum terverifikasi, hanya non-komersial.",
+    "accessed": "2026-10-28"
+   }
+  }
+ ]
+}

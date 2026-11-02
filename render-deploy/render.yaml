@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: tab-light-beta
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: ALLOW_UNREVIEWED_BETA
+        value: "false"
+      - key: ALLOW_BYOK
+        value: "false"
